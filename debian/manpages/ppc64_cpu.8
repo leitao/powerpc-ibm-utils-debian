@@ -1,0 +1,63 @@
+.TH PPC64_CPU 8 "12 March 2014" "Linux" "Linux on Power Service Tools"
+.SH NAME
+\fBppc64_cpu\fP \- cpu settings utility
+.SH SYNOPSIS
+.nf
+\fBppc64_cpu\fP [OPTION]
+.fi
+.SH DESCRIPTION
+This utility allows users to view and set the cpu SMT, DSCR and
+smt-snooze-delay settings.
+.SH OPTIONS
+.TP
+.B \--smt
+Get current SMT state.
+.TP
+.B \--smt={on|off}
+Set SMT state.
+.TP
+.B \--cores-present
+Get the number of cores present.
+.TP
+.B \--cores-on
+Get the number of cores currently online.
+.TP
+.B \--cores-on=X
+Put exactly X cores online.
+.TP
+.B \--dscr [-p <pid>]
+Get current DSCR system setting or, optionally, for <pid>.
+.TP
+.B \--dscr=<val> [-p <pid>]
+Change DSCR system setting or, optionally, for <pid>.
+.TP
+.B \--smt-snooze-delay
+Get current smt-snooze-delay setting.
+.TP
+.B \--smt-snooze-delay=<val>
+Change smt-snooze-delay setting.
+.TP
+.B \--run-mode
+Get current diagnostics run mode.
+.TP
+.B \--run-mode=<val>
+Set current diagnostics run mode.
+.TP
+.B \--frequency [-t <time>]
+Determine cpu frequency for <time> seconds, default is 1 second.
+.TP
+.B \--subcores-per-core
+Get number of subcores per core.
+.TP
+.B \--subcores-per-core=X
+Set subcores per core to X (1 or 4).
+.TP
+.B \--threads-per-core
+Get number of threads per core.
+.TP
+.B \--info
+Display system state information.
+.SH AUTHOR
+\fBppc64_cpu\fP was written by Anton Blanchard.
+.PP
+This manual page was written by Aur\['e]lien G\['E]R\[^O]ME <ag@roxor.cx> and Adam Conrad <adconrad@0c3.net> for the Debian project (but may be used by others).

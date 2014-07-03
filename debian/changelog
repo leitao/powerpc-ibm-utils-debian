@@ -1,0 +1,76 @@
+powerpc-ibm-utils (1.2.21-1) unstable; urgency=medium
+
+  * Adopt powerpc-ibm-utils, in conjuction with IBM (closes: #677761)
+  * New upstream release, with several endianness and other bug fixes.
+  * Define the new --threads-per-core option in our ppc64_cpu manpage.
+
+ -- Adam Conrad <adconrad@0c3.net>  Sun, 29 Jun 2014 23:03:37 -0600
+
+powerpc-ibm-utils (1.2.20-1) unstable; urgency=medium
+
+  * QA Upload.
+  * New upstream release, with ofpathname and lsslot fixes.
+  * ofpathname should work on all platforms now (closes: #611588),
+    though still doesn't handle appending partition info (#405337)
+
+ -- Adam Conrad <adconrad@debian.org>  Sun, 23 Mar 2014 11:13:24 -0600
+
+powerpc-ibm-utils (1.2.19-1) unstable; urgency=medium
+
+  * QA Upload.
+  * New upstream release (closes: #737112)
+  * Convert to dh(1) and bump build-dep to debhelper 9.
+  * Drop obsolete debian/patches.
+  * Enable build on ppc64el.
+  * Update ppc64_cpu manpage with new options.
+  * Add missing build-dep on zlib1g-dev.
+
+ -- Adam Conrad <adconrad@debian.org>  Wed, 12 Mar 2014 13:50:07 -0600
+
+powerpc-ibm-utils (1.2.12-1) unstable; urgency=low
+
+  * QA upload.
+  * Set the maintainer to Debian QA Group <packages@qa.debian.org> and remove
+    the uploaders.
+  * New upstream version:
+    - Fixes build with non-bash shells (closes: #612543).
+    - Fixes ofpathname (closes: #607001)
+    - Add a build-depends on librtas-dev, librtasevent-dev.
+  * Add a depends on bc for ofpathname (closes: #625728).
+  * Switch to 3.0 (quilt) format.
+  * Add build-arch and build-indep targets.
+  * Bump Standards-Version to 3.9.3.
+  * Remove Vcs-* entries from debian/control as they are not valid anymore.
+  * Add ppc64 to the list of architectures.
+
+ -- Aurelien Jarno <aurel32@debian.org>  Fri, 29 Jun 2012 23:54:32 +0000
+
+powerpc-ibm-utils (1.1.0-1) unstable; urgency=low
+
+  * New upstream release. (Closes: #436937)
+    + Write and add a manpage for the ppc64_cpu utility.
+    + Update long description in debian/control to include the
+      ppc64_cpu utility.
+  * These utilities are not really tied to a specific bootloader,
+    such as yaboot, because grub2 makes use of ofpathname. Therefore,
+    instead of the Yaboot Maintainers Team, set the maintainer to me.
+  * Switch from dpatch to quilt.
+  * Bump Standards-Version to 3.7.3.
+  * Add the Homepage field and remove it from the long description.
+  * Add the Vcs-Git/Vcs-Browser fields.
+  * Add the DM-Upload-Allowed field.
+  * Fix lintian warning "debian-rules-ignores-make-clean-error
+    line 44".
+  * Remove unused configure target in debian/rules.
+  * Remove the lsprop utility which is already in the powerpc-utils
+    package.
+
+ -- Aurélien GÉRÔME <ag@roxor.cx>  Tue, 05 Feb 2008 15:40:05 +0100
+
+powerpc-ibm-utils (1.0.2-1) unstable; urgency=low
+
+  * Initial release. (Closes: #386675)
+  * Set priority/section to important/utils like the powerpc-utils
+    package.
+
+ -- Aurélien GÉRÔME <ag@roxor.cx>  Sun, 24 Sep 2006 18:49:59 +0200
